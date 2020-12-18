@@ -1,0 +1,48 @@
+---
+title: "ReadMe"
+author: "LucyKS"
+date: "18/12/2020"
+output:
+  html_document: default
+  pdf_document: default
+  word_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Peer-graded Assignment: Getting and Cleaning Data Course Project
+
+
+### Data source
+
+One of the most exciting areas in all of data science right now is wearable computing - see for example [this article](http://www.insideactivitytracking.com/data-science-activity-tracking-and-the-battle-for-the-worlds-top-sports-brand/). Companies like Fitbit, Nike, and Jawbone Up are racing to develop the most advanced algorithms to attract new users. The data used for this project represent data collected from the accelerometers from the Samsung Galaxy S smartphone. A full description is available at [this site](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones) where the data was obtained:  
+
+[Here](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) are the zip data for the project. Refer the original ReadMe.txt included for detailed description of the data. 
+
+
+### Assignment - R script
+
+The R script called **run_analysis.R** uses two libraries: **dplyr** and **mgsub**, and performs the following data manipulation: 
+
+* Downloads the data in the zip file
+* Reads data from test and train folders, as well as the features and activity labels describing the data (raw data in Intertial Signals folders are not used here). 
+* Merges the training and the test sets creating one data set.
+* Extracts only the measurements on the mean and standard deviation for each measurement. 
+* Uses descriptive activity names to name the activities in the data set. 
+* Appropriately labels the data set with descriptive variable names. 
+* From the data set in step above, creates a second, independent tidy data set with the average of each variable for each activity and each subject. Instruction on how to read the file is given below.
+
+#### Reading tidy_data.txt
+This is the code to read tidy_data.txt (note: update path to data as needed). Refer to CodeBook.Rmd for the tiny_data.txt description.
+
+```{r read tidy data code, eval=FALSE, echo=TRUE}
+read.table("tidy_data.txt", header = TRUE)
+```
+
+***
+#### Thank you for reviewing my assignment and good luck with your coding challenge!
+
+

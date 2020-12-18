@@ -1,0 +1,119 @@
+---
+title: "CodeBook"
+author: "LucyKS"
+date: "18/12/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Peer-graded Assignment: Getting and Cleaning Data Course Project CodeBook
+
+### Data source
+The features for this project come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+
+Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals. Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm. 
+
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals. 
+
+These signals were used to estimate variables of the feature vector for each pattern:  '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+
+### Tidy_data.txt
+
+tidy_data.txt includes 88 variables (only features that included mean and standard deviation from the original data source) presenting mean values per each of 30 subjects and each of 6 types of activities (this totaling to 180 rows). 
+
+#### Subjects and Activities
+Two first variables are:
+subjectId: subject idenfyfier from 1 to 30
+activityType: activity type performed by a subject. Types of activities: walking, walking_upstairs, walking_downstairs, sitting, standing, laying (list of 6)
+
+#### Mean values of features calculated for each subject and activity
+Mean values of the features per each subject and each activity are calculated in variables:
+timeDomainBodyAccelerationMeanX_1
+timeDomainBodyAccelerationMeanY_1
+timeDomainBodyAccelerationMeanZ_1
+timeDomainBodyAccelerationStandardDeviationX_1
+timeDomainBodyAccelerationStandardDeviationY_1
+timeDomainBodyAccelerationStandardDeviationZ_1
+timeDomainGravityAccelerationMeanX_1
+timeDomainGravityAccelerationMeanY_1
+timeDomainGravityAccelerationMeanZ_1
+timeDomainGravityAccelerationStandardDeviationX_1
+timeDomainGravityAccelerationStandardDeviationY_1
+timeDomainGravityAccelerationStandardDeviationZ_1
+timeDomainBodyAccelerationJerkMeanX_1
+timeDomainBodyAccelerationJerkMeanY_1
+timeDomainBodyAccelerationJerkMeanZ_1
+timeDomainBodyAccelerationJerkStandardDeviationX_1
+timeDomainBodyAccelerationJerkStandardDeviationY_1
+timeDomainBodyAccelerationJerkStandardDeviationZ_1
+timeDomainBodyGyroscopeMeanX_1
+timeDomainBodyGyroscopeMeanY_1
+timeDomainBodyGyroscopeMeanZ_1
+timeDomainBodyGyroscopeStandardDeviationX_1
+timeDomainBodyGyroscopeStandardDeviationY_1
+timeDomainBodyGyroscopeStandardDeviationZ_1
+timeDomainBodyGyroscopeJerkMeanX_1
+timeDomainBodyGyroscopeJerkMeanY_1
+timeDomainBodyGyroscopeJerkMeanZ_1
+timeDomainBodyGyroscopeJerkStandardDeviationX_1
+timeDomainBodyGyroscopeJerkStandardDeviationY_1
+timeDomainBodyGyroscopeJerkStandardDeviationZ_1
+timeDomainBodyAccelerationMagnitudeMean_1
+timeDomainBodyAccelerationMagnitudeStandardDeviation_1
+timeDomainGravityAccelerationMagnitudeMean_1
+timeDomainGravityAccelerationMagnitudeStandardDeviation_1
+timeDomainBodyAccelerationJerkMagnitudeMean_1
+timeDomainBodyAccelerationJerkMagnitudeStandardDeviation_1
+timeDomainBodyGyroscopeMagnitudeMean_1
+timeDomainBodyGyroscopeMagnitudeStandardDeviation_1
+timeDomainBodyGyroscopeJerkMagnitudeMean_1
+timeDomainBodyGyroscopeJerkMagnitudeStandardDeviation_1
+frequencyDomainBodyAccelerationMeanX_1
+frequencyDomainBodyAccelerationMeanY_1
+frequencyDomainBodyAccelerationMeanZ_1
+frequencyDomainBodyAccelerationStandardDeviationX_1
+frequencyDomainBodyAccelerationStandardDeviationY_1
+frequencyDomainBodyAccelerationStandardDeviationZ_1
+frequencyDomainBodyAccelerationMeanFrequencyX_1
+frequencyDomainBodyAccelerationMeanFrequencyY_1
+frequencyDomainBodyAccelerationMeanFrequencyZ_1
+frequencyDomainBodyAccelerationJerkMeanX_1
+frequencyDomainBodyAccelerationJerkMeanY_1
+frequencyDomainBodyAccelerationJerkMeanZ_1
+frequencyDomainBodyAccelerationJerkStandardDeviationX_1
+frequencyDomainBodyAccelerationJerkStandardDeviationY_1
+frequencyDomainBodyAccelerationJerkStandardDeviationZ_1
+frequencyDomainBodyAccelerationJerkMeanFrequencyX_1
+frequencyDomainBodyAccelerationJerkMeanFrequencyY_1
+frequencyDomainBodyAccelerationJerkMeanFrequencyZ_1
+frequencyDomainBodyGyroscopeMeanX_1
+frequencyDomainBodyGyroscopeMeanY_1
+frequencyDomainBodyGyroscopeMeanZ_1
+frequencyDomainBodyGyroscopeStandardDeviationX_1
+frequencyDomainBodyGyroscopeStandardDeviationY_1
+frequencyDomainBodyGyroscopeStandardDeviationZ_1
+frequencyDomainBodyGyroscopeMeanFrequencyX_1
+frequencyDomainBodyGyroscopeMeanFrequencyY_1
+frequencyDomainBodyGyroscopeMeanFrequencyZ_1
+frequencyDomainBodyAccelerationMagnitudeMean_1
+frequencyDomainBodyAccelerationMagnitudeStandardDeviation_1
+frequencyDomainBodyAccelerationMagnitudeMeanFrequency_1
+frequencyDomainBodyAccelerationJerkMagnitudeMean_1
+frequencyDomainBodyAccelerationJerkMagnitudeStandardDeviation_1
+frequencyDomainBodyAccelerationJerkMagnitudeMeanFrequency_1
+frequencyDomainBodyGyroscopeMagnitudeMean_1
+frequencyDomainBodyGyroscopeMagnitudeStandardDeviation_1
+frequencyDomainBodyGyroscopeMagnitudeMeanFrequency_1
+frequencyDomainBodyGyroscopeJerkMagnitudeMean_1
+frequencyDomainBodyGyroscopeJerkMagnitudeStandardDeviation_1
+frequencyDomainBodyGyroscopeJerkMagnitudeMeanFrequency_1
+angletBodyAccelerationMeanGravity_1
+angletBodyAccelerationJerkMeanGravityMean_1
+angletBodyGyroscopeMeanGravityMean_1
+angletBodyGyroscopeJerkMeanGravityMean_1
+angleXGravityMean_1
+angleYGravityMean_1
+angleZGravityMean_1
