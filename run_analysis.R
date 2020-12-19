@@ -75,5 +75,10 @@ selectedStatsSetMeans <- selectedStatsSet %>%
   group_by(subjectId, activityType) %>%
   summarise(across(everything(), list(mean)))
 
+# Removing unwanted characters in the columns names
+selectedStatsSetMeansColNames <- colnames(selectedStatsSetMeans)
+selectedStatsSetMeansColNames <- gsub("_1$", "", selectedStatsSetMeansColNames)
+colnames(selectedStatsSetMeans) <- selectedStatsSetMeansColNames
+
 # Writing to output file
 write.table(selectedStatsSetMeans, "tidy_data.txt", row.names = FALSE, col.names = TRUE)

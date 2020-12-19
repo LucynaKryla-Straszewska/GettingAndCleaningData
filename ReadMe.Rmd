@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Peer-graded Assignment: Getting and Cleaning Data Course Project
 
+---
 
 ### Data source
 
@@ -22,6 +23,7 @@ One of the most exciting areas in all of data science right now is wearable comp
 
 [Here](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) are the zip data for the project. Refer the original ReadMe.txt included for detailed description of the data. 
 
+---
 
 ### Assignment - R script
 
@@ -35,6 +37,8 @@ The R script called **run_analysis.R** uses two libraries: **dplyr** and **mgsub
 * Appropriately labels the data set with descriptive variable names. 
 * From the data set in step above, creates a second, independent tidy data set with the average of each variable for each activity and each subject. Instruction on how to read the file is given below.
 
+---
+
 #### Reading tidy_data.txt
 This is the code to read tidy_data.txt (note: update path to data as needed). Refer to CodeBook.Rmd for the tiny_data.txt description.
 
@@ -42,7 +46,8 @@ This is the code to read tidy_data.txt (note: update path to data as needed). Re
 read.table("tidy_data.txt", header = TRUE)
 ```
 
-***
+---
+
 #### Thank you for reviewing my assignment and good luck with your coding challenge!
 
 
