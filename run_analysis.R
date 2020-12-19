@@ -10,7 +10,6 @@ library(mgsub)
 
 
 # Downloading and reading data
-
 if (!file.exists("./data")) {dir.create("./data")}
 
 fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
@@ -33,7 +32,6 @@ activityLabels <- read.table("./UCI HAR Dataset/activity_labels.txt", header = F
 
 # Reading features
 # Note: These are variables of testData and trainingData (number of variables 561 quals number of columns in testData and trainingData)
-
 variables <- read.table("./UCI HAR Dataset/features.txt", header = FALSE, col.names = c("id", "featureName"))
 
 
@@ -53,10 +51,9 @@ selectedStatsSet <- mergedSet[, grepl("subjectId|activityType|[Mm]ean|[Ss]td", c
 
 # Step3: Descriptive activity names used to name the activities
 # Note: Changing Subjects and Activities to Factors
-# Note: Tidying the activities names: lowercases and no underscore
+# Note: Tidying the activities names: lowercases
 
 selectedStatsSet$subjectId <- as.factor(selectedStatsSet$subjectId)
-
 selectedStatsSet$activityType <- factor(selectedStatsSet$activityType, levels = as.character(activityLabels$code), labels = tolower(activityLabels$label))
 
 
